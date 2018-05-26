@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+	<div id="app">
+		<div class="container" id="wrapper">
+			<div class="header container-fluid">
+				<h1> Calorie Counter  <img src="img/hearth.png" alt=""> </h1>
+			</div>
+			<div class="maincontent container-fluid">
+				<div class="oneRow container-fluid description" v-for="newFood in newFoodItems">
+					<input v-model="newFood.name" class="firstItems" type="text" placeholder="Name of the food">
+					<input v-model="newFood.calories" class="firstItems" type="number" placeholder="calories">
+					<input v-model="newFood.protein" class="firstItems" type="number" placeholder="Protein">
+					<input v-model="newFood.fats" class="firstItems" type="number" placeholder="Fats">
+					<input v-model="newFood.carbs" class="firstItems" type="number" placeholder="Carbs">
+					<button id="addButton" v-on:click="addNewFood">+</button>
+				</div>
+				<div class="oneRow container-fluid" v-for="(food, index) in foodItems">
+					<input type="text" v-model="food.name" >
+					<input type="number" min="0" v-model="food.calories">
+					<input type="number" min="0" v-model="food.protein">
+					<input type="number" min="0" v-model="food.fats">
+					<input type="number" min="0" v-model="food.carbs">
+					<button v-on:click="removeRow(index)">x</button>
+				</div>
+				
+				
+			</div>
+			<!-- missing main div -->
+			
+			<div class="total container-fluid">
+				<div class="totalResults container">
+					<h1>Total calories:</h1>
+					<p>{{ totalCalories }}</p>
+					<p>{{ totalProtein }}</p>
+					<p>{{ totalFats }}</p>
+					<p>{{ totalCarbs }}</p>
+					<h6>Luka Savovic 2018</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript" src="scripts/vendor.js"></script>
+<script type="text/javascript" src="scripts/scripts.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+</body>
+</html>

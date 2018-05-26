@@ -1,0 +1,45 @@
+.oneRow {
+    display: grid;
+    grid-template-columns: 3fr 3fr 2fr 2fr 2fr 1fr;
+    width: 90%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    .firstItems {
+        border-bottom: 1px solid #fd727b;
+        outline: none;
+    }
+    input {
+        width: 90%;
+        text-align: center;
+        border: none;
+        height: 40px;
+        background: transparent;
+        color: white;
+        outline: none;
+        &:focus {
+            border-bottom: 1px solid white;
+        }
+    }
+    button {   
+        border: none;
+        width: 50%;
+        justify-self: center;
+        text-align: center;
+        background-color: transparent;
+        border-radius: 5px;
+        padding: 5px 5px;
+        color: white;
+        &:hover {
+            color: slategrey;
+            transition: 0.5s all ease;
+        }
+    }
+}
+.description {
+    margin-top: 20px;
+}
+
+#addButton {
+    background-color: #fd727b;
+}

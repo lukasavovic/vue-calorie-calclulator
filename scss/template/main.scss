@@ -1,0 +1,32 @@
+#wrapper {
+    min-height: 50vh;
+    background-color: #1b1c37;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    margin: 0;
+    padding: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    .header {
+        justify-content: center;
+        background-color: #2d2c45;
+        border-radius: 10px 10px 0 0;
+        h1 {
+            color: white;
+            padding: 30px 25px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: lighter;
+            img {
+                width: 20px;
+            }
+        }
+    }
+    .maincontent {
+        height: 100%;
+        margin-bottom: 100px;
+        width: 90%;
+    
+    }
+}

@@ -1,0 +1,19 @@
+// Load Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+
+// Global Variables
+$background-body: #fafafa;
+$gray: #c9c9c9;
+$light-gray: #ebebeb;
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background: $background-body;
+	hr {
+		width: 90%;
+		margin: 5px auto;
+		box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+	}
+}
