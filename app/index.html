@@ -16,10 +16,10 @@
 			<div class="maincontent container-fluid">
 				<div class="oneRow container-fluid description" v-for="newFood in newFoodItems">
 					<input v-model="newFood.name" class="firstItems" type="text" placeholder="Name of the food">
-					<input v-model="newFood.calories" class="firstItems" type="number" placeholder="calories">
-					<input v-model="newFood.protein" class="firstItems" type="number" placeholder="Protein">
-					<input v-model="newFood.fats" class="firstItems" type="number" placeholder="Fats">
-					<input v-model="newFood.carbs" class="firstItems" type="number" placeholder="Carbs">
+					<input v-model="newFood.calories" class="firstItems" type="number" min="0" placeholder="calories">
+					<input v-model="newFood.protein" class="firstItems" type="number" min="0" placeholder="Protein">
+					<input v-model="newFood.fats" class="firstItems" type="number" min="0" placeholder="Fats">
+					<input v-model="newFood.carbs" class="firstItems" type="number" min="0" placeholder="Carbs">
 					<button id="addButton" v-on:click="addNewFood">+</button>
 				</div>
 				<div class="oneRow container-fluid" v-for="(food, index) in foodItems">
@@ -42,7 +42,7 @@
 					<p>{{ totalProtein }}</p>
 					<p>{{ totalFats }}</p>
 					<p>{{ totalCarbs }}</p>
-					<h6>Luka Savovic 2018</h6>
+					<!-- <h6>Luka Savovic 2018</h6> -->
 				</div>
 			</div>
 		</div>
